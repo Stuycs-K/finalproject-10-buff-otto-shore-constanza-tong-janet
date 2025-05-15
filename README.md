@@ -3,12 +3,12 @@
  
 ### GROUP NAME HERE (CHANGE THIS!!!!!)
 
-Group Members Here (CHANGE THIS!!!!!)
+Otto Buff, Janet Tong, Constanza Shore Coloni
        
 ### Project Description:
 
-Explain what is this project. (CHANGE THIS!!!!!)
-  
+Morse code Audio Stegonography
+
 ### Instructions:
 
 How does the user install/compile/run the program. (CHANGE THIS!!!!!)
