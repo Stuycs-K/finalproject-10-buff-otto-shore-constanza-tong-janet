@@ -2,7 +2,7 @@
 
 ## Group Members:
 
-names here.(CHANGE THIS!!!!!)
+Otto Buff, Janet Tong, Constanza Shore Coloni
        
 # Intentions:
 
