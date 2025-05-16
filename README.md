@@ -7,7 +7,7 @@ Otto Buff, Janet Tong, Constanza Shore Coloni
        
 ### Project Description:
 
-Morse code Audio Stegonography
+Audio Stegonography - hiding a morse code message in an audio file, and translating it to text
 
 ### Instructions:
 
