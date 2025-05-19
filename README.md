@@ -3,12 +3,12 @@
  
 ### GROUP NAME HERE (CHANGE THIS!!!!!)
 
-Group Members Here (CHANGE THIS!!!!!)
+Otto Buff, Janet Tong, Constanza Shore Coloni
        
 ### Project Description:
 
-Explain what is this project. (CHANGE THIS!!!!!)
-  
+Audio Stegonography - hiding a morse code message in an audio file, and translating it to text
+
 ### Instructions:
 
 How does the user install/compile/run the program. (CHANGE THIS!!!!!)
