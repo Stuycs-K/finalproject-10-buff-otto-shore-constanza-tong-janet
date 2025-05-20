@@ -11,10 +11,8 @@ LSB Audio Stegonography
 
 ### Instructions:
 
-How does the user install/compile/run the program. (CHANGE THIS!!!!!)
-How does the user interact with this program? (CHANGE THIS!!!!!)
+The user will be able to either encode a message into an audio file or decode an audio file containing a hidden message using makefile targets. For encode, the user will have to provide an existing audio file and a text file with the message, and the program will encode the text into the audio. For decode, the user will have to provide an audio file, and the program will search for a message in the LSB and output it into a new text file.
 
 ### Resources/ References:
 https://www.scielo.org.mx/scielo.php?script=sci_arttext&pid=S1405-55462022000100039 
 
-list here(CHANGE THIS!!!!!)
