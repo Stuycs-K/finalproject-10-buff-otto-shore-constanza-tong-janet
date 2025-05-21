@@ -11,6 +11,8 @@ public class encode{
 			FileInputStream file = new FileInputStream(filename);
 			bytes = new byte[(int)f.length()];
 			file.read(bytes);
+		}catch(IOException e){
+			System.out.println("File Not Found");
 		}
 		
 		
