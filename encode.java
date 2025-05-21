@@ -5,7 +5,16 @@ import java.nio.*;
 public class encode{
 	
 	public static byte[] getBytes(String filename){
-		return new byte[1];
+		byte[] bytes = new byte[1];
+		try{
+			File f = new File(filename);
+			FileInputStream file = new FileInputStream(filename);
+			bytes = new byte[(int)f.length()];
+			file.read(bytes);
+		}
+		
+		
+		return bytes;
 		//return bytes extracted from file
 	}
 	
