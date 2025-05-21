@@ -4,7 +4,7 @@ import java.nio.*;
 
 public class encode{
 	
-	public static byte[] getBytes(String filename){
+	public static byte[] getBytes(String filename){ 		//return bytes extracted from file
 		byte[] bytes = new byte[1];
 		try{
 			File f = new File(filename);
@@ -14,10 +14,14 @@ public class encode{
 		}catch(IOException e){
 			System.out.println("File Not Found");
 		}
-		
-		
+	
+		//testing
+		/* for(int i = 0; i < bytes.length; i++){
+			System.out.println((Integer)Byte.toUnsignedInt(bytes[i])+" ");
+		} */
+	  //System.out.println(Arrays.toString(bytes));
+
 		return bytes;
-		//return bytes extracted from file
 	}
 	
 	public static byte[] encode(byte[] bytes, String message){
@@ -27,6 +31,6 @@ public class encode{
 	
 	
 	public static void main(String[] args){
-		
+		getBytes(args[0]);
 	}
 }
