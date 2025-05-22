@@ -33,6 +33,11 @@ public class encode{
 			}
 		}
 		
+		for(int i = 0; i < bytes.length; i++){
+			// use | and &
+			//bytes[i] = bytes[i]
+		}
+		
 		return new byte[1];
 		//return modified array of bytes
 	}
