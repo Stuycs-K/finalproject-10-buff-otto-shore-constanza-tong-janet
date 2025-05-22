@@ -28,10 +28,11 @@ public class encode{
 		byte[] msg = new byte[message.length()*4];
 		for(int i = 0; i < message.length(); i++){
 			byte character = (byte)message.charAt(i);
-			for(int j = 0; j < 4; j++){
-				char[i*4 + j] = character >>
+			for(int j = 4; j > 0; j--){
+				msg[i*4] = character >>> 2*(j-1);
 			}
 		}
+		
 		return new byte[1];
 		//return modified array of bytes
 	}
