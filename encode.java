@@ -28,7 +28,7 @@ public class encode{
 		for(int i = 0; i < message.length(); i++){
 			byte character = (byte)message.charAt(i);
 			for(int j = 8; j > 0; j--){
-				msg[i*8 + j - 1] = (byte)((character >> ((j-1)))&3);
+				msg[i*8 + j - 1] = (byte)((character >> ((j-1)))&1);
 			}
 		}
 				
