@@ -15,10 +15,6 @@ public class encode{
 			System.out.println("File Not Found");
 		}
 	
-		//testing
-		/* for(int i = 0; i < bytes.length; i++){
-			System.out.println((Integer)Byte.toUnsignedInt(bytes[i])+" ");
-		} */
 	 // System.out.println(Arrays.toString(bytes));
 
 		return bytes;
@@ -35,19 +31,17 @@ public class encode{
 				msg[i*8 + j - 1] = (byte)((character >> ((j-1)))&3);
 			}
 		}
-	 // System.out.println(Arrays.toString(msg));
-		
+				
 		for(int i = 0; i < msg.length; i++){
 			bytes[i] = (byte)(bytes[i] | msg[i]);
 		}
 	//	System.out.println(Arrays.toString(bytes));
 		return bytes;
-		//return modified array of bytes
 	}
 	
 	
 	public static void main(String[] args){
-		//encode(getBytes(args[0]), "A");
+		//getBytes(args[0]);
 		encode(getBytes(args[0]), "A");
 	}
 }
