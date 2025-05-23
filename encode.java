@@ -37,7 +37,7 @@ public class encode{
 		}
 	 // System.out.println(Arrays.toString(msg));
 		
-		for(int i = 0; i < bytes.length; i++){
+		for(int i = 0; i < msg.length; i++){
 			bytes[i] = (byte)(bytes[i] | msg[i]);
 		}
 	//	System.out.println(Arrays.toString(bytes));
