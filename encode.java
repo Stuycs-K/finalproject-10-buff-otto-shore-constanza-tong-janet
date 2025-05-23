@@ -19,33 +19,35 @@ public class encode{
 		/* for(int i = 0; i < bytes.length; i++){
 			System.out.println((Integer)Byte.toUnsignedInt(bytes[i])+" ");
 		} */
-	  System.out.println(Arrays.toString(bytes));
+	 // System.out.println(Arrays.toString(bytes));
 
 		return bytes;
 	}
+	
+	
+	//A = 01000001
 	
 	public static byte[] encode(byte[] bytes, String message){
 		byte[] msg = new byte[message.length()*4];
 		for(int i = 0; i < message.length(); i++){
 			byte character = (byte)message.charAt(i);
 			for(int j = 4; j > 0; j--){
-				msg[i*4] = (byte)(character >>> 2*(j-1));
-				msg[i*4] = (byte)(msg[i*4] & 3);
+				msg[i*4 + j - 1] = (byte)((character >> (2*(j-1)))&3);
 			}
 		}
+	 // System.out.println(Arrays.toString(msg));
 		
 		for(int i = 0; i < bytes.length; i++){
 			bytes[i] = (byte)(bytes[i] | msg[i]);
-			// use | and &
-			//bytes[i] = bytes[i]
 		}
-		System.out.println(Arrays.toString(bytes));
+	//	System.out.println(Arrays.toString(bytes));
 		return bytes;
 		//return modified array of bytes
 	}
 	
 	
 	public static void main(String[] args){
+		//encode(getBytes(args[0]), "A");
 		encode(getBytes(args[0]), "A");
 	}
 }
