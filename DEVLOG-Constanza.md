@@ -4,6 +4,10 @@ This document must be updated daily every time you finish a work session.
 
 ## Constanza Shore Coloni
 
+### 2025-05-22
+* working on encode method
+* spent time debugging
+
 ### 2025-05-21
 * Started working on encoding with LSB
 
