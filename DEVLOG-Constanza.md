@@ -4,8 +4,18 @@ This document must be updated daily every time you finish a work session.
 
 ## Constanza Shore Coloni
 
-### 2024-01-02 - Brief description
-Expanded description including how much time was spent on task.
+### 2025-05-21
+* Started working on encoding with LSB
 
-### 2024-01-03 - Brief description
-Expanded description including how much time was spent on task.
+### 2025-05-20
+* Planned out methods, worked on reading in file of bits (from audio) to encode
+
+### 2025-05-19 - Brief description
+* Discussed project and class and decided to switch from morse code to LSB audio steganography
+* split up work
+* Created file to start working on encode
+
+### 2025-05-16 - Decided on Audio Steganography
+* Researched types of audio steganography to do for project, decided on morse code
+* Took a look at morse code decrypters
+* Researched how we could read in an audio
