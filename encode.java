@@ -28,11 +28,11 @@ public class encode{
 	//A = 01000001
 	
 	public static byte[] encode(byte[] bytes, String message){
-		byte[] msg = new byte[message.length()*4];
+		byte[] msg = new byte[message.length()*8];
 		for(int i = 0; i < message.length(); i++){
 			byte character = (byte)message.charAt(i);
-			for(int j = 4; j > 0; j--){
-				msg[i*4 + j - 1] = (byte)((character >> (2*(j-1)))&3);
+			for(int j = 8; j > 0; j--){
+				msg[i*8 + j - 1] = (byte)((character >> ((j-1)))&3);
 			}
 		}
 	 // System.out.println(Arrays.toString(msg));
