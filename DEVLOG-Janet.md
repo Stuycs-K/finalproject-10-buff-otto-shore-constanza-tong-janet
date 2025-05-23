@@ -15,8 +15,10 @@ This document must be updated daily every time you finish a work session.
 - Researched Phase coding audio steganography (15 minutes)
 - Discussed planning (10 minutes)
 
-### 2025-05-20 - Python Speech Recognition 
-- 
+### 2025-05-20 - Audio to Bytes
+- Researching wave library functions (10 minutes)
+- Converted audio to bytes (15 minutes)
+- Wrote bytes to file (10 minutes)
 
 ### 2024-01-02 - Brief description
 Expanded description including how much time was spent on task.
