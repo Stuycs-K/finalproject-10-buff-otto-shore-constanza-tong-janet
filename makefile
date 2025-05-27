@@ -1,3 +1,5 @@
+clear: 
+	@rm *.class
 encode: encode.class
 	@java encode $(ARGS)
 encode.class: encode.java
