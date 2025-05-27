@@ -35,6 +35,9 @@ public class encode{
 		for(int i = 0; i < msg.length; i++){
 			bytes[i] = (byte)(bytes[i] | msg[i]);
 		}
+		for(int i = msg.length; i < bytes.length; i++){
+			bytes[i] = (byte)(bytes[i] | 0);
+		}
 	//	System.out.println(Arrays.toString(bytes));
 		return bytes;
 	}
