@@ -4,6 +4,16 @@ This document must be updated daily every time you finish a work session.
 
 ## Constanza Shore Coloni
 
+### 2025-05-27
+* fully tested encode
+* researching different audio steganography
+* started different LSB encode, only replacing LSB of every third byte
+
+### 2025-05-23
+* debugged encode, fully functioning now
+* made makefile
+* did some more reserach for ideas to expand project
+
 ### 2025-05-22
 * working on encode method
 * spent time debugging
