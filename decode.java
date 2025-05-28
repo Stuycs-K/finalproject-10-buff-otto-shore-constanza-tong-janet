@@ -7,8 +7,8 @@ public class Decode {
         if (row != null) {
           for (int i : row) {
             if (i > 1 || i < 0){
-              System.out.println("Invalid binary, cancelling operation");
-              return "Error";
+              System.out.println("Invalid binary, no more bits will be read");
+              break;
             }
             newstr.append(i);
           }
