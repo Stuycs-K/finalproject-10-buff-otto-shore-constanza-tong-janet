@@ -6,6 +6,10 @@ public class Decode {
       for (int[] row : arr) {
         if (row != null) {
           for (int i : row) {
+            if (i > 1 || i < 0){
+              System.out.println("Invalid binary, cancelling operation");
+              return "Error";
+            }
             newstr.append(i);
           }
         }
