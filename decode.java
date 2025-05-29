@@ -1,4 +1,4 @@
-public class Decode {
+public class Decode extends ReadFile{
   public static String decodeMessage(int[][] arr) {
     StringBuilder newstr = new StringBuilder();
     
