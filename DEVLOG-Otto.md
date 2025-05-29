@@ -16,4 +16,4 @@ Working on decode.java
 Adding error messages to decode.java
 
 ### 2025-5-29
-
+Working on decode and readfile, changing readfile to return 2d array

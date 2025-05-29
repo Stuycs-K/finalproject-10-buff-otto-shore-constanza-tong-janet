@@ -1,4 +1,10 @@
 public class Decode extends ReadFile{
+  public static void main(String[] args){
+    int[][] arr = new arr[][];
+    arr = readf("temp.txt");
+    String message = decodeMessage(arr);
+  }
+  
   public static String decodeMessage(int[][] arr) {
     StringBuilder newstr = new StringBuilder();
     
