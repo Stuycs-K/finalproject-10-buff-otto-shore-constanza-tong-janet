@@ -8,4 +8,12 @@ This document must be updated daily every time you finish a work session.
 Brainstorming ideas, decided to do LSB audio steganography.
 
 ### 2025-5-20 - Brief description
-Expanded description including how much time was spent on task.
+Creating, working on decode.java
+Writing README.md
+
+### 2025-5-28
+Working on decode.java
+Adding error messages to decode.java
+
+### 2025-5-29
+Working on decode and readfile, changing readfile to return 2d array

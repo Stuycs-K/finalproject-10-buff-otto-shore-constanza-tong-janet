@@ -1,5 +1,7 @@
+clear: 
+	@rm *.class
 encode: encode.class
-	@java encode "LSB" $(ARGS)
+	@java encode $(ARGS)
 encode.class: encode.java
 	@javac encode.java 
 decode: decode.class 

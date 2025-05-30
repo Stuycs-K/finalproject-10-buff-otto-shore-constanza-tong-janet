@@ -15,39 +15,51 @@ public class encode{
 			System.out.println("File Not Found");
 		}
 	
-		//testing
-		/* for(int i = 0; i < bytes.length; i++){
-			System.out.println((Integer)Byte.toUnsignedInt(bytes[i])+" ");
-		} */
-	 // System.out.println(Arrays.toString(bytes));
-
+		/*for(int i = 0; i < 4*4; i++){
+			System.out.print((Integer)Byte.toUnsignedInt(bytes[i])+" ");
+		}*/
 		return bytes;
 	}
 	
 	
 	//A = 01000001
+	//B = 01000010
 	
 	public static byte[] encode(byte[] bytes, String message){
-		byte[] msg = new byte[message.length()*4];
+		byte[] msg = new byte[message.length()*8];
 		for(int i = 0; i < message.length(); i++){
 			byte character = (byte)message.charAt(i);
-			for(int j = 4; j > 0; j--){
-				msg[i*4 + j - 1] = (byte)((character >> (2*(j-1)))&3);
+			for(int j = 8; j > 0; j--){
+				msg[i*8 + j - 1] = (byte)((character >> ((j-1)))&1);
+				//msg[(i+1)*8 - j ] = (byte)((character >> ((j-1)))&1);
+				
 			}
-		}
-	 // System.out.println(Arrays.toString(msg));
-		
+		}				
 		for(int i = 0; i < msg.length; i++){
 			bytes[i] = (byte)(bytes[i] | msg[i]);
 		}
-	//	System.out.println(Arrays.toString(bytes));
+		System.out.println(Arrays.toString(msg));
+		
+		for(int i = msg.length; i < bytes.length; i++){
+			bytes[i] = (byte)(bytes[i] | 0);
+		}
+		
+		for(int i = 0; i < msg.length; i++){
+			System.out.print((Integer)Byte.toUnsignedInt(bytes[i])+" ");
+		}
 		return bytes;
-		//return modified array of bytes
 	}
 	
+	/*public static byte[] encode2(byte[] bytes, String message){
+		byte[] msg = new byte[message.length()*8];
+		for(int i = 0; i < message.length(); i++){
+			byte character = (byte)message.charAt(i);
+			for(int j = 8; j > 0)
+		}
+	}*/
 	
 	public static void main(String[] args){
-		//encode(getBytes(args[0]), "A");
-		encode(getBytes(args[0]), "A");
+		//getBytes(args[0]);
+		encode(getBytes(args[0]), args[1]);
 	}
 }
