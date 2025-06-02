@@ -15,9 +15,10 @@ public class encode{
 			System.out.println("File Not Found");
 		}
 	
-		/*for(int i = 0; i < 4*4; i++){
+	/*	for(int i = 0; i < 4*4; i++){
 			System.out.print((Integer)Byte.toUnsignedInt(bytes[i])+" ");
-		}*/
+		}
+		*/
 		return bytes;
 	}
 	
@@ -29,8 +30,8 @@ public class encode{
 		byte[] msg = new byte[message.length()*8];
 		for(int i = 0; i < message.length(); i++){
 			byte character = (byte)message.charAt(i);
-			for(int j = 8; j > 0; j--){
-				msg[i*8 + j - 1] = (byte)((character >> ((j-1)))&1);
+			for(int j = 0; j <8; j++){
+				msg[(i+1)*8 - j -1] = (byte)((character >> ((j)))&1);
 				//msg[(i+1)*8 - j ] = (byte)((character >> ((j-1)))&1);
 				
 			}
