@@ -50,14 +50,6 @@ public class encode{
 		return bytes;
 	}
 	
-	/*public static byte[] encode2(byte[] bytes, String message){
-		byte[] msg = new byte[message.length()*8];
-		for(int i = 0; i < message.length(); i++){
-			byte character = (byte)message.charAt(i);
-			for(int j = 8; j > 0)
-		}
-	}*/
-	
 	public static void main(String[] args){
 		//getBytes(args[0]);
 		encode(getBytes(args[0]), args[1]);
