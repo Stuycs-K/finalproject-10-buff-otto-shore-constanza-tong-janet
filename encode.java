@@ -39,21 +39,21 @@ public class encode{
 		for(int i = 0; i < msg.length; i++){
 			bytes[i] = (byte)(bytes[i] | msg[i]);
 		}
-		System.out.println(Arrays.toString(msg));
+	//	System.out.println(Arrays.toString(msg));
 		
 		for(int i = msg.length; i < bytes.length; i++){
 			bytes[i] = (byte)(bytes[i] | 0);
 		}
 		
-		for(int i = 0; i < msg.length; i++){
+/*		for(int i = 0; i < msg.length; i++){
 			System.out.print((Integer)Byte.toUnsignedInt(bytes[i])+" ");
-		}
+		}*/
 		return bytes;
 	}
 	
-	public static void updateBytes(byte[] bytes){
+	public static void updateBytes(byte[] bytes, String filename){
 		try{
-			FileOutputStream file = new FileOutputStream("encoded.txt");
+			FileOutputStream file = new FileOutputStream(filename);
 			file.write(bytes);
 		}catch(IOException e){
 			System.out.println("exception");
@@ -62,7 +62,8 @@ public class encode{
 	}
 	public static void main(String[] args){
 		//getBytes(args[0]);
-		//encode(getBytes(args[0]), args[1]);
-		updateBytes(encode(getBytes(args[0]), args[1]));
+		encode(getBytes(args[0]), args[1]);
+		//updateBytes(encode(getBytes(args[0]), args[1]), "encoded.txt");
+		//updateBytes(encode(getBytes(args[0]), args[1]), args[2]);
 	}
 }
