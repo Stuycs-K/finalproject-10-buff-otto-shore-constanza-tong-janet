@@ -33,6 +33,17 @@ public class ReadFile {
               reader.close();
       }
   }
+  
+      public static byte[] getBytes(String filename) {
+          byte[] bytes = new byte[1];
+          try (FileInputStream fis = new FileInputStream(filename)) {
+              bytes = fis.readAllBytes();
+          } catch (IOException e) {
+              System.out.println("File Not Found");
+          }
+          return bytes;
+      }
+
 }
 
 }

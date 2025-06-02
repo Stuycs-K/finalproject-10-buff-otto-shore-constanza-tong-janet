@@ -1,9 +1,20 @@
 import java.io.*;
 
 public class Decode {
+  
+    public static byte[] getBytes(String filename) {
+        byte[] bytes = new byte[1];
+        try (FileInputStream fis = new FileInputStream(filename)) {
+           bytes = fis.readAllBytes();
+        } catch (IOException e) {
+            System.out.println("File Not Found");
+        }
+           return bytes;
+      }
+
 
     public static String decode(byte[] bytes) {
-        StringBuilder msg = new StringBuilder();
+        StringBuilder msg = new StringBuilder();
         int p = 0;
         byte l = 0;
         int b = 0;
