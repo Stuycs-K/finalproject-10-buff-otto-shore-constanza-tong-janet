@@ -1,7 +1,6 @@
 Checklist: 
 
 Constanza: 
-- writing updated bytes to file 
 - testing encode & decode on different files 
 
 Otto: 
