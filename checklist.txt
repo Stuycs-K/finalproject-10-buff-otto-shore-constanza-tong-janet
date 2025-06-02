@@ -1,0 +1,13 @@
+Checklist: 
+
+Constanza: 
+- writing updated bytes to file 
+- testing encode & decode on different files 
+
+Otto: 
+- makefile 
+- testing encode & decode on different files 
+
+Janet: 
+- encode --> after changing the bits, return a new audio file 
+- spectrogram analysis 
