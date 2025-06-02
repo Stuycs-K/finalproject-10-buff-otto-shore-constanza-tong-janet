@@ -8,4 +8,5 @@ def audio_bits(path):
         f.write(arr)
         
 
-audio_bits('cyber.wav')
+arr = audio_bits('cyber.wav')
+
