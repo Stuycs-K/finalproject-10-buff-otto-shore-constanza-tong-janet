@@ -50,8 +50,18 @@ public class encode{
 		return bytes;
 	}
 	
+	public static void updateBytes(byte[] bytes){
+		try{
+			FileOutputStream file = new FileOutputStream("encoded.txt");
+			file.write(bytes);
+		}catch(IOException e){
+			System.out.println("exception");
+		}
+		
+	}
 	public static void main(String[] args){
 		//getBytes(args[0]);
-		encode(getBytes(args[0]), args[1]);
+		//encode(getBytes(args[0]), args[1]);
+		updateBytes(encode(getBytes(args[0]), args[1]));
 	}
 }
