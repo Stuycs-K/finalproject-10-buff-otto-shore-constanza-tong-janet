@@ -20,6 +20,9 @@ This document must be updated daily every time you finish a work session.
 - Converted audio to bytes (15 minutes)
 - Wrote bytes to file (10 minutes)
 
+### 2025-05-29 - Testing & Debugging
+- Spent the period testing the byte output of audio.py for decode.java 
+
 ### 2024-01-02 - Brief description
 Expanded description including how much time was spent on task.
 
