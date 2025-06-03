@@ -8,6 +8,7 @@ loadaudio: audio.py
 returnaudio: audio.py 
 	python audio.py $(ARGS)
 	rm temp.txt
+	rm encode.txt
 
 encode: encode.class 
 	java Encode temp.txt $(ARGS)

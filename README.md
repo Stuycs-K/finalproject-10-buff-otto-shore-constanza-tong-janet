@@ -16,20 +16,30 @@ Audio Stegonography (LSB, Spectrograms, etc.)
 The user will e able to either encode a message into an audio file or decode an audio file containing a hidden message using makefile targets. 
 
 **ENCODE INSTRUCTIONS**: 
-1) Begin by loading the audio of your choice: make loadaudio [INSERT AUDIO FILE]
+1) Begin by loading the audio of your choice: make loadaudio [INSERT AUDIO FILE NAME]
 
-This audio file must be a wavfile. Find sample wavfiles in the wavFile folder. 
+This audio file must be a wavfile. Find sample raw wavfiles in the wavFiles/raw folder. 
 
 2) Encode your message into the loaded audio: make encode [INSERT MESSAGE]
 
-3) Finally, run the following to insert the modified bytes back into a new wavfile: make returnaudio [INSERT AUDIO FILE] [INSERT NEW AUDIO FILE NAME]
+3) Finally, run the following to insert the modified bytes back into a new wavfile: make returnaudio [INSERT AUDIO FILE NAME] [INSERT NEW AUDIO FILE NAME]
 
-This will create a new encoded wavfile with the user's indicated name. This way, the user can hear faint differences in the audio. 
+Ex: make returnaudio cyber.wav modified.wav
+
+This will create a new encoded wavfile with the user's indicated name in the wavFiles/encoded folder. This way, the user can hear faint differences in the audio. 
+
+**DECODE INSTRUCTIONS**:
+1) The user must again begin by loading the encoded audio file: make loadaudio [INSERT AUDIO FILE NAME] 
+
+Find encoded audio files in the encoded folder of wavFiles for testing. 
+
+2) Decode the message: make decode [INSERT AUDIO FILE NAME] [INSERT OUTPUT FILE NAME] 
+
+Use the encoded audio file and provide a name for the file with the message. 
 
 
 ##### Spectrogram Visualizations
 
-The user will be able to either encode a message into an audio file or decode an audio file containing a hidden message using makefile targets. For encode, the user will have to provide an existing audio file and a text file with the message, and the program will encode the text into the audio. For decode, the user will have to provide an audio file, and the program will search for a message in the LSB and output it into a new text file.
 
 ### Resources/ References:
 https://www.scielo.org.mx/scielo.php?script=sci_arttext&pid=S1405-55462022000100039 
