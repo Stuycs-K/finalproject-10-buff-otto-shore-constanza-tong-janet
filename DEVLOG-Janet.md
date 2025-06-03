@@ -28,6 +28,10 @@ This document must be updated daily every time you finish a work session.
 - Converted encoded bytes back to the audio file (20 minutes) 
 - Discussed further action items (5 minutes)
 
+### 2025-06-03 - Spectrograms from Audio 
+- Wrote function for visualizing wav files in both audio waves and spectrograms 
+- Reviewed how to convert audio into a spectrogram: https://www.geeksforgeeks.org/plotting-a-spectrogram-using-python-and-matplotlib/ 
+
 ### 2024-01-02 - Brief description
 Expanded description including how much time was spent on task.
 
