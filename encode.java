@@ -7,8 +7,8 @@ public class encode{
 	public static byte[] getBytes(String filename){ 		//return bytes extracted from file
 		byte[] bytes = new byte[1];
 		try{
-			File f = new File('wavFiles/raw/' + filename);
-			FileInputStream file = new FileInputStream('wavFiles/raw/' + filename);
+			File f = new File(filename);
+			FileInputStream file = new FileInputStream(filename);
 			bytes = new byte[(int)f.length()];
 			file.read(bytes);
 		}catch(IOException e){

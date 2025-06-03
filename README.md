@@ -16,24 +16,24 @@ Audio Stegonography (LSB, Spectrograms, etc.)
 The user will e able to either encode a message into an audio file or decode an audio file containing a hidden message using makefile targets. 
 
 **ENCODE INSTRUCTIONS**: 
-1) Begin by loading the audio of your choice: make loadaudio [INSERT AUDIO FILE NAME]
+1) Begin by loading the audio of your choice: make loadaudio ARGS=[INSERT AUDIO FILE NAME]
 
 This audio file must be a wavfile. Find sample raw wavfiles in the wavFiles/raw folder. 
 
-2) Encode your message into the loaded audio: make encode [INSERT MESSAGE]
+2) Encode your message into the loaded audio: make encode ARGS=[INSERT MESSAGE]
 
-3) Finally, run the following to insert the modified bytes back into a new wavfile: make returnaudio [INSERT AUDIO FILE NAME] [INSERT NEW AUDIO FILE NAME]
+3) Finally, run the following to insert the modified bytes back into a new wavfile: make returnaudio ARGS=[INSERT AUDIO FILE NAME] [INSERT NEW AUDIO FILE NAME]
 
-Ex: make returnaudio cyber.wav modified.wav
+Ex: make returnaudio ARGS=cyber.wav modified.wav
 
 This will create a new encoded wavfile with the user's indicated name in the wavFiles/encoded folder. This way, the user can hear faint differences in the audio. 
 
 **DECODE INSTRUCTIONS**:
-1) The user must again begin by loading the encoded audio file: make loadaudio [INSERT AUDIO FILE NAME] 
+1) The user must again begin by loading the encoded audio file: make loadaudio ARGS=[INSERT AUDIO FILE NAME] 
 
 Find encoded audio files in the encoded folder of wavFiles for testing. 
 
-2) Decode the message: make decode [INSERT AUDIO FILE NAME] [INSERT OUTPUT FILE NAME] 
+2) Decode the message: make decode ARGS=[INSERT AUDIO FILE NAME] [INSERT OUTPUT FILE NAME] 
 
 Use the encoded audio file and provide a name for the file with the message. 
 

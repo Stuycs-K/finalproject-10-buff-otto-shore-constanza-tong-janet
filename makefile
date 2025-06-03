@@ -11,13 +11,13 @@ returnaudio: audio.py
 	rm encode.txt
 
 encode: encode.class 
-	java Encode temp.txt $(ARGS)
+	java encode temp.txt $(ARGS)
 
 encode.class: encode.java
 	javac encode.java
 
 decode: decode.class
-	java Decode $(ARGS)
+	java decode $(ARGS)
 
 decode.class: decode.java
 	javac decode.java

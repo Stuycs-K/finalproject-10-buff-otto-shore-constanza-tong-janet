@@ -29,11 +29,10 @@ def bits_to_audio(path, new_path):
     with wave.open(new_path, 'wb') as wav: 
         wav.writeframes(byte_arr)
 
-
 if len(sys.argv) == 2: 
     audio_to_bits('wavFiles/raw/' + sys.argv[1])
 else: 
-    bits_to_audio('wavFiles/raw/' +sys.argv[1], 'wavFiles/encoded/' + sys.argv[2])
+    bits_to_audio('wavFiles/raw/' +sys.argv[0], 'wavFiles/encoded/' + sys.argv[1])
 
 
 
