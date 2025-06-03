@@ -64,7 +64,37 @@ public class encode{
 	public static void main(String[] args){
 		//getBytes(args[0]);
 		//encode(getBytes(args[0]), args[1]);
-		updateBytes(encode(getBytes(args[0]), args[1]), "encoded.txt");
-		//updateBytes(encode(getBytes(args[0]), args[1]), args[2]);
+		//updateBytes(encode(getBytes(args[0]), args[1]), "encoded.txt");
+		updateBytes(encode(getBytes(args[0]), args[1]), args[2]);
 	}
+	
+	
+	
+	/*
+	public static void decode(byte[] bytes){
+		String ans = "";
+		int j = 0;
+		for(int i = 0; i < bytes.length; i++){
+			int b = bytes[i];
+			b = (byte)(b & 1);
+			bytes[i] = (byte)b;
+		}
+		for(int i = 0; i < bytes.length - 8; i+=8){
+			byte result = bytes[i+7];
+			result = (byte)(result | (bytes[i+6] << 1));
+			result =(byte)( result | (bytes[i+5] << 2));
+			result = (byte)(result | (bytes[i+4] << 3));
+			result = (byte)(result | (bytes[i+3] << 4));
+			result = (byte)(result | (bytes[i+2] << 5));
+			result = (byte)(result | (bytes[i+1] << 6));
+			result = (byte)(result | (bytes[i] << 7));
+			ans += (char)result;
+		//	ans += (char)((((bytes[i] << 6) | (bytes[i+1] << 4)) | (bytes[i+2] << 2)) | (bytes[i+3]));
+		}
+	
+		//System.out.println(ans.substring(0, 5));
+	}
+		*/
+	
+	
 }
