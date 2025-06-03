@@ -21,7 +21,7 @@ This document must be updated daily every time you finish a work session.
 - Wrote bytes to file (10 minutes)
 
 ### 2025-05-29 - Testing & Debugging
-- Spent the period testing the byte output of audio.py for decode.java 
+- Spent the period testing the byte output of audio.py for decode.java & discussed planning
 
 ### 2025-06-02 - Bits to Audio 
 - Used shutil to create copy of audio file for modification (10 minutes)
