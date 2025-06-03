@@ -1,6 +1,6 @@
 import wave 
 import shutil 
-import os
+import matplotlib.pyplot as plt 
 
 #path: the audio file name 
 def audio_to_bits(path): 
@@ -27,5 +27,22 @@ def bits_to_audio(path):
     with wave.open(path, 'wb') as wav: 
         wav.writeframes(byte_arr)
 
-        
+
+def visualize_wave(path): 
+    #read audio file 
+    audio = wave.open(path) 
+    #read frames, -1 = all frames
+    signal = audio.readframes(-1) 
+    signal = np.frombuffer(signal, dytype='int16')
+    #frame rate 
+    f_rate = audio.getframerate()
+
+    time = np.linspace(0, len(signal)/f_rate, num = len(signal))
+    plt.figure(1)
+    plt.ylabel('amplitude')
+    plt.xlabel('time')
+    plt.plot(time, signal)
+    plt.show() 
+
+
 
