@@ -1,6 +1,7 @@
 import wave 
 import shutil 
 import matplotlib.pyplot as plt 
+import scipy.io.wavfile as wavfile
 
 #path: the audio file name 
 def audio_to_bits(path): 
@@ -44,5 +45,10 @@ def visualize_wave(path):
     plt.plot(time, signal)
     plt.show() 
 
-
+def spectrogram(path): 
+    Fs, aud = wavfile.read(path)
+    aud = aud[:0] 
+    first = aud[:int(Fs*125)] 
+    powerSpectrum, frequenciesFound, time, imageAxis = plt.specgram(first, Fs=Fs)
+    plt.show()
 
