@@ -62,8 +62,8 @@ public class encode{
 	}
 	public static void main(String[] args){
 		//getBytes(args[0]);
-		encode(getBytes(args[0]), args[1]);
-		//updateBytes(encode(getBytes(args[0]), args[1]), "encoded.txt");
+		//encode(getBytes(args[0]), args[1]);
+		updateBytes(encode(getBytes(args[0]), args[1]), "encoded.txt");
 		//updateBytes(encode(getBytes(args[0]), args[1]), args[2]);
 	}
 }
