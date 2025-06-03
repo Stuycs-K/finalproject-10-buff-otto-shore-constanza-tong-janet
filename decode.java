@@ -5,12 +5,12 @@ public class Decode {
     public static byte[] getBytes(String filename) {
         byte[] bytes = new byte[1];
         try (FileInputStream fis = new FileInputStream(filename)) {
-           bytes = fis.readAllBytes();
+            bytes = fis.readAllBytes();
         } catch (IOException e) {
             System.out.println("File Not Found");
         }
-           return bytes;
-      }
+        return bytes;
+    }
 
 
     public static String decode(byte[] bytes) {
@@ -33,9 +33,14 @@ public class Decode {
     }
 
     public static void main(String[] args) {
+        if (args.length != 2) {
+            System.err.println("Usage: Decode ");
+            System.exit(1);
+        }
         
         String bf = args[0];
         String tf = args[1];
+        
         try (FileOutputStream out = new FileOutputStream(tf)) {
             out.write(decode(getBytes(bf)).getBytes());
         } catch (IOException e) {
