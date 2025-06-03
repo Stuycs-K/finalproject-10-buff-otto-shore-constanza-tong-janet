@@ -1,10 +1,18 @@
-clear: 
-	@rm *.class
+.PHONY: all clear encode decode
+
+all: encode decode
+
 encode: encode.class
-	@java encode $(ARGS)
+	java Encode $(ARGS)
+
 encode.class: encode.java
-	@javac encode.java 
-decode: decode.class 
-	@java decode $(ARGS)
+	javac encode.java
+
+decode: decode.class
+	java Decode $(ARGS)
+
 decode.class: decode.java
-	@javac decode.java 
+	javac decode.java
+
+clear:
+	rm -f *.class
