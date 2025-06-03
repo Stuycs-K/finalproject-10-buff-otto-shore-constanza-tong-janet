@@ -4,6 +4,10 @@ This document must be updated daily every time you finish a work session.
 
 ## Constanza Shore Coloni
 
+### 2025-06-02
+* testing encode
+* wrote encoded bytes to file
+
 ### 2025-05-27
 * fully tested encode
 * researching different audio steganography

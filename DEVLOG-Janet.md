@@ -31,6 +31,7 @@ This document must be updated daily every time you finish a work session.
 ### 2025-06-03 - Spectrograms from Audio 
 - Wrote function for visualizing wav files in both audio waves and spectrograms 
 - Reviewed how to convert audio into a spectrogram: https://www.geeksforgeeks.org/plotting-a-spectrogram-using-python-and-matplotlib/ 
+- Found a video on hiding wav files inside images instead! Pretty cool. https://www.youtube.com/watch?v=om-HJU4pwzg&ab_channel=FrancescoPiscani 
 
 ### 2024-01-02 - Brief description
 Expanded description including how much time was spent on task.
