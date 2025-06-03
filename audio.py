@@ -3,6 +3,8 @@ import shutil
 import matplotlib.pyplot as plt 
 import scipy.io.wavfile as wavfile
 
+import sys
+
 #path: the audio file name 
 def audio_to_bits(path): 
     audio = wave.open(path, mode = 'rb')
@@ -14,21 +16,31 @@ def audio_to_bits(path):
     except FileNotFoundError: 
         print("File not found")
 
-    shutil.copy(path, 'modified_audio.wav') #copy audio file into a new file to be modified
+    shutil.copy(path, ) #copy audio file into a new file to be modified
 
 
 #path: the modified audio file name
-def bits_to_audio(path): 
+def bits_to_audio(path, new_path): 
+    shutil.copy(path, new_path)
     try: 
         with open("encode.txt", "rb") as f: #read bytes from file
             byte_arr = bytearray(f.read())
     except FileNotFoundError: 
         print("File not found")
 
-    with wave.open(path, 'wb') as wav: 
+    with wave.open(new_path, 'wb') as wav: 
         wav.writeframes(byte_arr)
 
 
+if len(sys.argv) == 2: 
+    audio_to_bits(argv[1])
+else: 
+    bits_to_audio(argv[1], argv[2])
+
+
+
+
+#--------- visualizations ----------------
 def visualize_wave(path): 
     #read audio file 
     audio = wave.open(path) 

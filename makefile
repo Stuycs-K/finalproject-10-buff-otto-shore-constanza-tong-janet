@@ -2,8 +2,15 @@
 
 all: encode decode
 
-encode: encode.class
-	java Encode $(ARGS)
+loadaudio: audio.py
+	python audio.py $(ARGS)
+
+returnaudio: audio.py 
+	python audio.py $(ARGS)
+	rm temp.txt
+
+encode: encode.class 
+	java Encode temp.txt $(ARGS)
 
 encode.class: encode.java
 	javac encode.java
