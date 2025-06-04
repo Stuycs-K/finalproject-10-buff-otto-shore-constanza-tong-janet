@@ -54,7 +54,7 @@ def encode3(message, byte_array):
         curr_byte = byte_array[i]
         if (curr_byte & 192) == 192:
             byte_array[i] = (byte_array[i] & 254) | message_array[j]
-            j++
+            j += 1
     return bytes(byte_array)  
    
 
