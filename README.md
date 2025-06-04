@@ -35,6 +35,8 @@ Optionally, the user may include a 2nd argument for the mode, either an incremen
 
 The user first indicates which audio file they want to visualize. There are two modes: wave and spectrogram. The wave mode will produce a graph that maps the amplitude vs time for the audio. The spectrogram mode will produce a spectrogram of the audio that allows the user to observe the changes in frequency through variation in colors. These visuals can help us view encoded files. 
 
+Note that for these make commands, the full path is required. For example: make visual ARGS="wavFiles/raw/cyber.wav spectrogram" 
+
 ### Resources/ References:
 - https://www.scielo.org.mx/scielo.php?script=sci_arttext&pid=S1405-55462022000100039 
     - Overview of LSB steganography
