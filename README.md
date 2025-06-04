@@ -4,6 +4,10 @@
 ### Constanzinnovation et al. 
 
 Otto Buff, Janet Tong, Constanza Shore Coloni
+
+### Presentation Materials: 
+[Presentation Video](https://drive.google.com/file/d/1fQ4KnOQ__nJ7o4DEzlUVL4eLgY3gRWsB/view?usp=sharing)
+[Presentation.md File](https://github.com/Stuycs-K/finalproject-10-buff-otto-shore-constanza-tong-janet/blob/main/Presentation.md)
        
 ### Project Description:
 

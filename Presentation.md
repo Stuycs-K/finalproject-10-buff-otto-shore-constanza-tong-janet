@@ -53,7 +53,7 @@ Increment LSB:
 
 ### Extensions to other Audio Stegonography 
  
-* Can mbed data such as text messages or images into the spectrogram, then convert it back into audio.
+* Can embed data such as text messages or images into the spectrogram, then convert it back into audio.
 * The audio sounds normal, but when re-spectrogrammed, the hidden content appears.
 * Tools like Aphex Twin’s Equation famously used this to hide a face in a spectrogram.
 * Software like Audacity and Coagula are frequently used for this. 

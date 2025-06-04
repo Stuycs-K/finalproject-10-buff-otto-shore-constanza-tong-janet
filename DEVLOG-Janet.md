@@ -57,11 +57,5 @@ https://khareanu1612.medium.com/audio-signal-processing-with-spectrograms-and-li
 - Added specific modes with Constanza (45 minutes) 
 - Revised makefile for updates (10 minutes) 
 - Revised and completed Readme (20 minutes)
-
-
-
-### 2024-01-02 - Brief description
-Expanded description including how much time was spent on task.
-
-### 2024-01-03 - Brief description
-Expanded description including how much time was spent on task.
+- Presentation document (1 hour)
+- Recorded video (1 hour)
