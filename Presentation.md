@@ -14,7 +14,7 @@ Audio Steganography: act of hiding secret messages in audio files
 
 ### Modifications
 
-* Instead of changing the LSB of every byte, change it of every other byte or every two or three bytes
+* Instead of changing the LSB of every byte, change the LSB of every other byte or every two or three bytes
 * Come up with a way of determining which bytes will get changed, for example if the byte's first two bits are 11
 
 There are also other methods to hide a message, such as phase coding and spread spectrum
