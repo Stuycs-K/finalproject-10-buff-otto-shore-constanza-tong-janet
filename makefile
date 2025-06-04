@@ -1,25 +1,13 @@
-.PHONY: all clear encode decode
+.PHONY: all encode decode
 
 all: encode decode
 
-loadaudio: audio.py
-	python audio.py $(ARGS)
+encode: encode.py
+	python encode.py $(ARGS)
 
-returnaudio: audio.py 
-	python audio.py $(ARGS)
-	rm temp.txt
+decode: decode.py
+	python decode.py $(ARGS)
 
-encode: encode.class 
-	java encode temp.txt $(ARGS)
+visual: visual.py 
+	python visual.py $(ARGS)
 
-encode.class: encode.java
-	javac encode.java
-
-decode: decode.class
-	java decode $(ARGS)
-
-decode.class: decode.java
-	javac decode.java
-
-clear:
-	rm -f *.class
