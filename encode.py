@@ -33,15 +33,28 @@ def encode(message, byte_array):
 #NEW
 #message: message in string
 #byte_array: the byte array of the audio
-#encodes each bit into the lsb of the byte array
 #increment: how many bytes to skip when encoding
+#encodes each bit into the lsb of the byte array, but skip every [increment] number of bytes
 def encode2(message, byte_array, increment):
     message = message + int(len(byte_array)/8 - len(message)) * '&'
     message_array = message_to_bits(message)
     for i in range(0, len(byte_array), increment): 
         byte_array[i] = (byte_array[i] & 254) | message_array[i]
     return bytes(byte_array)
-    
+  
+#NEW  
+#message: message in string
+#byte_array: the byte array of the audio
+#encodes each bit into the lsb of the byte array, but only if the 2 most significant bits are 1
+def encode3(message, byte_array):
+    message = message + int(len(byte_array)/8 - len(message)) * '&'
+    message_array = message_to_bits(message)
+    for i in range(len(byte_array)): 
+        curr_byte = byte_array[i]
+        if (curr_byte & 192) == 192:
+            byte_array[i] = (byte_array[i] & 254) | message_array[i]
+    return bytes(byte_array)  
+   
 
 #path: the modified audio file name
 #new_path: the new audio file 
@@ -60,18 +73,28 @@ def main(path, new_path, message):
     bits_to_audio(path, new_path, new_bytes)
 
 # NEW
-# to encode every n bytes
+# to encode every increment bytes
 def main2(path, new_path, message, increment): 
     byte_array = audio_to_bits(path)
     new_bytes = encode2(message, byte_array, increment)
+    bits_to_audio(path, new_path, new_bytes)
+    
+# NEW
+# to encode only bytes starting with 11
+def main3(path, new_path, message): 
+    byte_array = audio_to_bits(path)
+    new_bytes = encode3(message, byte_array)
     bits_to_audio(path, new_path, new_bytes)
 
 
 # main('wavFiles/raw/' + sys.argv[1], 'wavFiles/encoded/' + sys.argv[2], sys.argv[3])
 
 #NEW
-if (len(sys. argv) - 1) == 4:
-    main2('wavFiles/raw/' + sys.argv[1], 'wavFiles/encoded/' + sys.argv[2], sys.argv[3], sys.argv[4])
+if (len(sys.argv) - 1) == 4:
+    if sys.argv[5] = 'msb':
+        main3('wavFiles/raw/' + sys.argv[1], 'wavFiles/encoded/' + sys.argv[2], sys.argv[3])
+    else:
+        main2('wavFiles/raw/' + sys.argv[1], 'wavFiles/encoded/' + sys.argv[2], sys.argv[3], sys.argv[4])        
 else:
     main('wavFiles/raw/' + sys.argv[1], 'wavFiles/encoded/' + sys.argv[2], sys.argv[3])
     
