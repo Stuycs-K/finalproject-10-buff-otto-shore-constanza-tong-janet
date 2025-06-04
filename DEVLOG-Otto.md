@@ -16,11 +16,20 @@ Working on decode.java
 Adding error messages to decode.java
 
 ### 2025-5-29
-Working on decode and readfile, changing readfile to return 2d array
+Working on decode and readfile
+changing readfile to return 2d array
 
 ### 2025-6-01
-Working on decode, changed most to work
+Working on decode
+changed most to work
 
 ### 2025-6-02
-Added exception for decode, fixing makefile, testing on files
+Added exception for decode
+fixing makefile
+testing on files
 
+### 2025-6-03
+Working on debugging decode
+Testing on decode
+Presentation notes
+Record
