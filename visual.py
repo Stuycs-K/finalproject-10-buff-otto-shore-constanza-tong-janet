@@ -1,14 +1,15 @@
 import matplotlib.pyplot as plt 
-import scipy.io.wavfile as wavfile
 import wave 
 import numpy as np 
+import sys
+import librosa 
 
 def visualize_wave(path): 
     #read audio file 
     audio = wave.open(path) 
     #read frames, -1 = all frames
     signal = audio.readframes(-1) 
-    signal = np.frombuffer(signal, dytype='int16')
+    signal = np.frombuffer(signal, dtype='int16')
     #frame rate 
     f_rate = audio.getframerate()
 
@@ -20,8 +21,16 @@ def visualize_wave(path):
     plt.show() 
 
 def spectrogram(path): 
-    Fs, aud = wavfile.read(path)
-    aud = aud[:0] 
-    first = aud[:int(Fs*125)] 
-    powerSpectrum, frequenciesFound, time, imageAxis = plt.specgram(first, Fs=Fs)
+    aud, sr = librosa.load(path, sr=44100)
+    X = librosa.stft(aud)
+    Xdb = librosa.amplitude_to_db(abs(X))
+    plt.figure(figsize=(14, 5))
+    librosa.display.specshow(Xdb, sr=sr, x_axis='time', y_axis='log')
+    plt.colorbar()
     plt.show()
+
+if sys.argv[2] == "wave": 
+    visualize_wave(sys.argv[1])
+if sys.argv[2] == "spectrogram":
+    spectrogram(sys.argv[1])
+
