@@ -23,7 +23,7 @@ Optionally, the user may include a 4th argument specifying a mode:
 2) They may alternatively only change the LSB for the "Most Significant Bytes" (a byte is deemed  significant if its first 2 bits are both 1). This feature is toggled by adding the argument "msb" in make encode. (e.g. make encode ARGS="cyber.wav new_cyber.wav mEsSaGe msb")
 
 
-#### **DECODE INSTRUCTIONS**: make decode ARGS=[INSERT ENCODED AUDIO FILE NAME] [MODE] 
+#### **DECODE INSTRUCTIONS**: make decode ARGS=[INSERT ENCODED AUDIO FILE NAME] [(optional) MODE] 
 
 Note that the audio file must be inside wavFiles/encoded. 
 
@@ -35,4 +35,10 @@ The user first indicates which audio file they want to visualize. There are two 
 
 ### Resources/ References:
 https://www.scielo.org.mx/scielo.php?script=sci_arttext&pid=S1405-55462022000100039 
+https://sumit-arora.medium.com/audio-steganography-the-art-of-hiding-secrets-within-earshot-part-2-of-2-c76b1be719b3 
+https://medium.com/@bikashojha904/from-sound-waves-to-spectrograms-a-comprehensive-guide-to-preparing-audio-datasets-for-asr-1-fa324452f523
+https://medium.com/@AungKyawZall/audio-steganography-39f9fb6d9330
+https://manual.audacityteam.org/man/spectrogram_view.html
+https://www.youtube.com/watch?v=1EqCQrVEEVs&ab_channel=ChristianEspinosa 
+
 
