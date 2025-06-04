@@ -10,7 +10,7 @@ We were also fascinated by spectrograms, after one was shown to us in class. It 
 * data is extracted from the audio file, and the bits of the message are hidden in the least significant bits of the audio file
 * to extract the message, the least significant bits are extracted and the message is reconstructed
 
-![Alt text](./LSBvisual.png "LSB visual")
+![Alt text](./pngFiles/LSBvisual.png "LSB visual")
 
 * Pros: One of the simplest methods to hide message, and LSB doesn't change the byte by much so it shouldn't be perceptible
 * Cons: In an audio file, changing the LSB of every byte might generate noise that has a chance of being noticed by the human
@@ -34,22 +34,22 @@ Here, you can see the peaks that represent our graph.
 
 * Our program can generate these graphs as well 
 
-![Alt text](./audio_wave.png "Audio wave visual")
+![Alt text](./pngFiles/audio_wave.png "Audio wave visual")
 
 **Spectrograms** 
 * Spectrograms are a development from audio waves  that instead measure changes in frequency v. time using colors. Darker areas indicate greater frequencies, which can be observed from our program 
 
-![Alt text](./spectrogram.png "spectrogram visual")
+![Alt text](./pngFiles/spectrogram.png "spectrogram visual")
 
 Use these visuals to observe differences between our modes of LSB! 
 
 Regular LSB: 
 
-![Alt text](./m_spectrogram.png "m_spectrogram visual")
+![Alt text](./pngFiles/m_spectrogram.png "m_spectrogram visual")
 
 Increment LSB: 
 
-![Alt text](./inc_spectrogram.png "inc_spectrogram visual")
+![Alt text](./pngFiles/inc_spectrogram.png "inc_spectrogram visual")
 
 ### Extensions to other Audio Stegonography 
  
@@ -60,9 +60,9 @@ Increment LSB:
 
 View this phenomenon here! 
 
-![Alt text](./spec_steg.png "spec_steg visual")
+![Alt text](./pngFiles/spec_steg.png "spec_steg visual")
 
-![Alt text](./hidden.png "hidden visual")
+![Alt text](./pngFiles/hidden.png "hidden visual")
 
 
 
