@@ -49,10 +49,12 @@ def encode2(message, byte_array, increment):
 def encode3(message, byte_array):
     message = message + int(len(byte_array)/8 - len(message)) * '&'
     message_array = message_to_bits(message)
+    j = 0
     for i in range(len(byte_array)): 
         curr_byte = byte_array[i]
         if (curr_byte & 192) == 192:
-            byte_array[i] = (byte_array[i] & 254) | message_array[i]
+            byte_array[i] = (byte_array[i] & 254) | message_array[j]
+            j++
     return bytes(byte_array)  
    
 
