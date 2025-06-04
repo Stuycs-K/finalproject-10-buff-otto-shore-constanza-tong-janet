@@ -29,6 +29,19 @@ def encode(message, byte_array):
     for i in range(len(byte_array)): 
         byte_array[i] = (byte_array[i] & 254) | message_array[i]
     return bytes(byte_array)
+    
+#NEW
+#message: message in string
+#byte_array: the byte array of the audio
+#encodes each bit into the lsb of the byte array
+#increment: how many bytes to skip when encoding
+def encode2(message, byte_array, increment):
+    message = message + int(len(byte_array)/8 - len(message)) * '&'
+    message_array = message_to_bits(message)
+    for i in range(0, len(byte_array), increment): 
+        byte_array[i] = (byte_array[i] & 254) | message_array[i]
+    return bytes(byte_array)
+    
 
 #path: the modified audio file name
 #new_path: the new audio file 
@@ -46,8 +59,25 @@ def main(path, new_path, message):
     new_bytes = encode(message, byte_array)
     bits_to_audio(path, new_path, new_bytes)
 
+# NEW
+# to encode every n bytes
+def main2(path, new_path, message, increment): 
+    byte_array = audio_to_bits(path)
+    new_bytes = encode2(message, byte_array, increment)
+    bits_to_audio(path, new_path, new_bytes)
 
-main('wavFiles/raw/' + sys.argv[1], 'wavFiles/encoded/' + sys.argv[2], sys.argv[3])
+
+# main('wavFiles/raw/' + sys.argv[1], 'wavFiles/encoded/' + sys.argv[2], sys.argv[3])
+
+#NEW
+if (len(sys. argv) - 1) == 4:
+    main2('wavFiles/raw/' + sys.argv[1], 'wavFiles/encoded/' + sys.argv[2], sys.argv[3], sys.argv[4])
+else:
+    main('wavFiles/raw/' + sys.argv[1], 'wavFiles/encoded/' + sys.argv[2], sys.argv[3])
+    
+    
+     
+    
 
 
 
