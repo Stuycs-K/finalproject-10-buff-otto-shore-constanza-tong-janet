@@ -60,8 +60,7 @@ Note that for these make commands, the full path is required. For example: make 
 - https://khareanu1612.medium.com/audio-signal-processing-with-spectrograms-and-librosa-b66a0a6bc5cc  
     - Used sample code from librosa library to form spectrograms 
 - https://svenruppert.com/2024/04/17/audio-steganography-in-more-detail/
-		- Great breakdown of the different methods of audio steganography and their advantages, challenges, and considerations
-    - 
+	- Great breakdown of the different methods of audio steganography and their advantages, challenges, and considerations
 
 
 
