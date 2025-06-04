@@ -43,6 +43,7 @@ Note that for these make commands, the full path is required. For example: make 
 - https://sumit-arora.medium.com/audio-steganography-the-art-of-hiding-secrets-within-earshot-part-2-of-2-c76b1be719b3
     - Used sample code as basis for python encode and decode 
     - Was able to understand LSB concepts from this article 
+		- great visuals of LSB, used image in presentation
 - https://medium.com/@bikashojha904/from-sound-waves-to-spectrograms-a-comprehensive-guide-to-preparing-audio-datasets-for-asr-1-fa324452f523
     - Used to understand how to render audio waves and how they can be shifted 
 - https://medium.com/@AungKyawZall/audio-steganography-39f9fb6d9330
@@ -54,8 +55,9 @@ Note that for these make commands, the full path is required. For example: make 
     - Used manual for spectrograms to understand how to encode information within the graphs (still unsuccessful)
 - https://khareanu1612.medium.com/audio-signal-processing-with-spectrograms-and-librosa-b66a0a6bc5cc  
     - Used sample code from librosa library to form spectrograms 
-
-    
+- https://svenruppert.com/2024/04/17/audio-steganography-in-more-detail/
+		- Great breakdown of the different methods of audio steganography and their advantages, challenges, and considerations
+    - 
 
 
 
