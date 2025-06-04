@@ -13,29 +13,20 @@ Audio Stegonography (LSB, Spectrograms, etc.)
 
 ##### LSB Audio Steganography 
 
-The user will e able to either encode a message into an audio file or decode an audio file containing a hidden message using makefile targets. 
+The user will be able to either encode a message into an audio file or decode an audio file containing a hidden message using makefile targets. 
 
-**ENCODE INSTRUCTIONS**: 
-1) Begin by loading the audio of your choice: make loadaudio ARGS=[INSERT AUDIO FILE NAME]
+**ENCODE INSTRUCTIONS**: make encode ARGS=[INSERT AUDIO FILE NAME] [INSERT MODIFIED AUDIO FILE NAME] [THE MESSAGE] 
 
-This audio file must be a wavfile. Find sample raw wavfiles in the wavFiles/raw folder. 
+The first argument is the name of the audio file that the user is encoding the message into: this audio file must be inside the folder wavFiles/raw. The second argument is the name of the modified output audio: when encode is run, the output file can be found inside wavFiles/encoded. The third argument is the message. 
 
-2) Encode your message into the loaded audio: make encode ARGS=[INSERT MESSAGE]
+Optionally, the user may include a 4th argument: 
+1) They may specify an integer increment n in which the LSB for every nth byte will be changed as opposed to every consecutive byte. 
 
-3) Finally, run the following to insert the modified bytes back into a new wavfile: make returnaudio ARGS=[INSERT AUDIO FILE NAME] [INSERT NEW AUDIO FILE NAME]
+2) They may alternatively only change the LSB for the "Most Significant Bytes" (a byte is deemed  significant if its first 2 bits are both 1). This feature is toggled by adding the argument "msb" in make encode. 
 
-Ex: make returnaudio ARGS=cyber.wav modified.wav
 
-This will create a new encoded wavfile with the user's indicated name in the wavFiles/encoded folder. This way, the user can hear faint differences in the audio. 
+**DECODE INSTRUCTIONS**: make decode ARGS=[INSERT AUDIO FILE NAME] [INSERT MODIFIED AUDIO FILE NAME] [THE MESSAGE] 
 
-**DECODE INSTRUCTIONS**:
-1) The user must again begin by loading the encoded audio file: make loadaudio ARGS=[INSERT AUDIO FILE NAME] 
-
-Find encoded audio files in the encoded folder of wavFiles for testing. 
-
-2) Decode the message: make decode ARGS=[INSERT AUDIO FILE NAME] [INSERT OUTPUT FILE NAME] 
-
-Use the encoded audio file and provide a name for the file with the message. 
 
 
 ##### Spectrogram Visualizations
