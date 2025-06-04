@@ -41,6 +41,16 @@ Here, you can see the peaks that represent our graph.
 
 ![Alt text](./spectrogram.png "spectrogram visual")
 
+Use these visuals to observe differences between our modes of LSB! 
+
+Regular LSB: 
+
+![Alt text](./m_spectrogram.png "m_spectrogram visual")
+
+Increment LSB: 
+
+![Alt text](./inc_spectrogram.png "m_spectrogram visual")
+
 ### Extensions to other Audio Stegonography 
  
 * Can mbed data such as text messages or images into the spectrogram, then convert it back into audio.
