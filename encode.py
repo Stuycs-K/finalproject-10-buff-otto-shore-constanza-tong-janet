@@ -39,7 +39,7 @@ def encode2(message, byte_array, increment):
     message = message + int(len(byte_array)/8 - len(message)) * '&'
     message_array = message_to_bits(message)
     for i in range(0, len(byte_array), increment): 
-        byte_array[i] = (byte_array[i] & 254) | message_array[i]
+        byte_array[i] = (byte_array[i] & 254) | message_array[int(i/increment)]
     return bytes(byte_array)
   
 #NEW  
@@ -91,10 +91,10 @@ def main3(path, new_path, message):
 
 #NEW
 if (len(sys.argv) - 1) == 4:
-    if sys.argv[5] == 'msb':
-        main3('wavFiles/raw/' + sys.argv[1], 'wavFiles/encoded/' + sys.argv[2], sys.argv[3], sys.argv[4])
+    if sys.argv[4] == 'msb':
+        main3('wavFiles/raw/' + sys.argv[1], 'wavFiles/encoded/' + sys.argv[2], sys.argv[3])
     else:
-        main2('wavFiles/raw/' + sys.argv[1], 'wavFiles/encoded/' + sys.argv[2], sys.argv[3], sys.argv[4])        
+        main2('wavFiles/raw/' + sys.argv[1], 'wavFiles/encoded/' + sys.argv[2], sys.argv[3], int(sys.argv[4]))        
 else:
     main('wavFiles/raw/' + sys.argv[1], 'wavFiles/encoded/' + sys.argv[2], sys.argv[3])
     

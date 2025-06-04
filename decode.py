@@ -19,10 +19,10 @@ def decode(byte_array, increment):
     
     return message.split("&&&&")[0]
 
-def decode2(byte_array, increment): 
+def decode2(byte_array): 
     message_bits = ""
     message = ""
-    for i in range(0, len(byte_array), increment): 
+    for i in range(len(byte_array)): 
         curr_byte = byte_array[i]
         if (curr_byte & 192) == 192:
             message_bits += str(byte_array[i] & 1)
@@ -38,15 +38,15 @@ def main(path, increment):
     message = decode(byte_array, increment) 
     print(message)
     
-def main2(path, increment): 
+def main2(path): 
     byte_array = audio_to_bits(path) 
-    message = decode2(byte_array, increment) 
+    message = decode2(byte_array) 
     print(message)
 
 if (len(sys.argv) - 1) == 2:
     if sys.argv[2] == 'msb':
-        main2('wavFiles/encoded/' + sys.argv[1], sys.argv[2])
+        main2('wavFiles/encoded/' + sys.argv[1])
     else:
-        main('wavFiles/encoded/' + sys.argv[1], sys.argv[2])
+        main('wavFiles/encoded/' + sys.argv[1], int(sys.argv[2]))
 else:
     main('wavFiles/encoded/' + sys.argv[1], 1)
