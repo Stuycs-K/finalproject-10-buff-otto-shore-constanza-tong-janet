@@ -91,7 +91,7 @@ def main3(path, new_path, message):
 
 #NEW
 if (len(sys.argv) - 1) == 4:
-    if sys.argv[5] = 'msb':
+    if sys.argv[5] == 'msb':
         main3('wavFiles/raw/' + sys.argv[1], 'wavFiles/encoded/' + sys.argv[2], sys.argv[3])
     else:
         main2('wavFiles/raw/' + sys.argv[1], 'wavFiles/encoded/' + sys.argv[2], sys.argv[3], sys.argv[4])        
