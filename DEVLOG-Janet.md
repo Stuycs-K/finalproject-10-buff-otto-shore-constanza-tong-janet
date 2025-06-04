@@ -30,6 +30,11 @@ https://medium.com/@achyuta.katta/audio-steganography-using-phase-encoding-d13f1
 - Makefile (10 minutes)
 - Started decode 
 
+### 2025-05-23 - Spectrograms Stegonography 
+- https://manual.audacityteam.org/man/spectrogram_view.html Reviewed this manual to understand how to implement stegonography in spectrograms 
+- Reviewed how to create spectrograms in python 
+https://khareanu1612.medium.com/audio-signal-processing-with-spectrograms-and-librosa-b66a0a6bc5cc  
+
 ### Sick from 2025-05-26 to 2025-05-29 :( - No Progress
 
 ### 2025-05-30 - Testing & Debugging
