@@ -4,6 +4,13 @@ This document must be updated daily every time you finish a work session.
 
 ## Constanza Shore Coloni
 
+### 2025-06-03
+* testing decode with encode
+* research on how to hide image in a spectrogram using code not just outside software or tools
+* got nowhere with the spctrogram so researched other methods of setagnography
+* https://repository.rit.edu/cgi/viewcontent.cgi?referer=&httpsredir=1&article=1305&context=other
+* https://svenruppert.com/2024/04/17/audio-steganography-in-more-detail/
+
 ### 2025-06-02
 * testing encode
 * wrote encoded bytes to file
