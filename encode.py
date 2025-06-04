@@ -70,7 +70,7 @@ def main2(path, new_path, message, increment):
 # main('wavFiles/raw/' + sys.argv[1], 'wavFiles/encoded/' + sys.argv[2], sys.argv[3])
 
 #NEW
-if (len(sys. argv) - 1) == 4:
+if (len(sys.argv) - 1) == 4:
     main2('wavFiles/raw/' + sys.argv[1], 'wavFiles/encoded/' + sys.argv[2], sys.argv[3], sys.argv[4])
 else:
     main('wavFiles/raw/' + sys.argv[1], 'wavFiles/encoded/' + sys.argv[2], sys.argv[3])
