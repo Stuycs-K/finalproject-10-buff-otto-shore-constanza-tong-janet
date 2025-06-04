@@ -11,6 +11,8 @@ Our project is LSB Audio Stegonography, where the least significant bits of the 
 
 ### Instructions:
 
+**Important:** To run this program, the following python libraries need to be installed: wave, librosa, matplotlib.pyplot, sys, and numpy. 
+
 The user will be able to either encode a message into an audio file or decode an audio file containing a hidden message using makefile targets. 
 
 #### **ENCODE INSTRUCTIONS**: make encode ARGS=[INSERT AUDIO FILE NAME] [INSERT MODIFIED AUDIO FILE NAME] [THE MESSAGE] [(optional) MODE] 
