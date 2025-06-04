@@ -49,7 +49,7 @@ Regular LSB:
 
 Increment LSB: 
 
-![Alt text](./inc_spectrogram.png "m_spectrogram visual")
+![Alt text](./inc_spectrogram.png "inc_spectrogram visual")
 
 ### Extensions to other Audio Stegonography 
  
@@ -57,6 +57,13 @@ Increment LSB:
 * The audio sounds normal, but when re-spectrogrammed, the hidden content appears.
 * Tools like Aphex Twin’s Equation famously used this to hide a face in a spectrogram.
 * Software like Audacity and Coagula are frequently used for this. 
+
+View this phenomenon here! 
+
+![Alt text](./spec_steg.png "spec_steg visual")
+
+![Alt text](./hidden.png "hidden visual")
+
 
 
 
