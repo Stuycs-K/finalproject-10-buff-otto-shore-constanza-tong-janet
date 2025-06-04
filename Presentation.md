@@ -1,5 +1,9 @@
 # Audio Steganography
 
+We decided to implement a Least Significant Bit (LSB) audio steganography program for our final project. Steganography, the art of hiding information within other, seemingly innocent information, was something we all found interesting when taking this class. Completing the image processing assignment got us even more interested in the field, and we chose to write an audio version as well. Our program focused on lsb steganography. It analyzed the least significant bits - the last bit of each byte - in an audio file, compiling them all to create a hidden message. Although you can see these changes on a computer, to the human ear the audio sounds virtually the same, making this an extremely effective method of concealing the existence of messages. 
+We were also fascinated by a spectrogram, altered to show a message, of an audio track which we were shown in class. We created spectrograms like this for our audio files, in order to see what the altered tracks look like, in addition to hearing what they sound like. 
+
+
 **Audio Steganography**: the act of hiding secret messages in audio files
 
 ### Least Significant Bit (LSB) Insertion
