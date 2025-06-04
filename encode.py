@@ -1,5 +1,4 @@
 import wave 
-import shutil
 import sys
 
 #path: the audio file name
