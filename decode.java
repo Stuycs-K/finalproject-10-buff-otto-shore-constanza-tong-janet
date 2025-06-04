@@ -18,7 +18,7 @@ public class Decode {
         byte l = 0;
         int b = 0;
         for (byte b_loop : bytes) {
-            l |= ((b_loop & 1) << b);
+            l |= ((b_loop & 1) << (7 - b));
             b++;
             if (b == 8) {
                 if (l == 0xFF)

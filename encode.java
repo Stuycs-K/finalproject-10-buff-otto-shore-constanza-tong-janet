@@ -2,7 +2,7 @@ import java.util.*;
 import java.io.*;
 import java.nio.*;
 
-public class encode{
+public class Encode{
 	
 	public static byte[] getBytes(String filename){ 		//return bytes extracted from file
 		byte[] bytes = new byte[1];
